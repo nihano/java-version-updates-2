@@ -15,6 +15,21 @@ public class Main {
 
         printDoubled(items);
 
+        System.out.println("*********************************");
+
+        FootballPlayer joe = new FootballPlayer("Joe");
+        BaseballPlayer pat = new BaseballPlayer("Pat");
+        SoccerPlayer beckham = new SoccerPlayer("Beckham");
+
+        Team<SoccerPlayer> liverpool = new Team("Liverpool"); //Team was accepting any object before adding <SoccerPlayer>. We made Team class generic by adding <T> so that we can now restrict data type here
+        //liverpool.addPlayer(joe);
+        //liverpool.addPlayer(pat);
+        liverpool.addPlayer(beckham);
+
+        //Team<String> brokenTeam =new Team<>("what kind of team is this?"); String is not a child class of Player --> Team<T extends Player> in Team class
+
+        //Team<Integer> t2 = new Team<>("very weird"); Integer is not a child class of Player --> Team<T extends Player> in Team class
+
     }
 
     public static void printDoubled(ArrayList<Integer> items){
