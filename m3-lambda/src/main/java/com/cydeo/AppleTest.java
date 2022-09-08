@@ -19,6 +19,10 @@ public class AppleTest {
         List<Apple> greenApple = filterApples(inventory, new AppleGreenColorPredicate());
         System.out.println(greenApple);
 
+        ApplePredicate weightApple = (Apple apple) -> apple.getWeight()>200; //Lambda Expression
+        filterApples(inventory, weightApple);
+
+
 
     }
 
