@@ -39,6 +39,11 @@ public class Main {
         System.out.println("Operation task");
         calculate(3, 5, Operation.PLUS);
 
+        System.out.println("how to retrieve the constant value");
+        System.out.println(Currency.PENNY.getValue()); // we access the value through the obj via getter
+        System.out.println(Currency.QUARTER.getValue());
+        System.out.println(Currency.QUARTER.ordinal()); // returns index number of constant in enum
+
     }
 
     private static void calculate(double x, double y, Operation operation) {
@@ -67,4 +72,7 @@ public class Main {
 Task: create a method for Math operations
       create a method called 'calculate' which accepts 3 parameters and prints the result
       based on the selected operator in switch-case  declared inside the method
+
+HOMEWORK:
+
  */
