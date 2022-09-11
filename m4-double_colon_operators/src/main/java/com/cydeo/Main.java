@@ -1,5 +1,7 @@
 package com.cydeo;
 
+import java.util.function.BiFunction;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Main {
@@ -21,6 +23,13 @@ public class Main {
         Calculate s3 = obj::findMultiply;
 
         Calculate s4 = new Calculator()::findMultiply;
+
+        BiFunction<String, Integer, String> func = (str, i) ->str.substring(i);
+        BiFunction<String, Integer, String> func2 = String::substring; //SUBSTRING METHOD IS NOT STATIC WHY WE CALL THIS THROUGH THE CLASS NAME?
+        //ANSWER --> because we have a return type in this method which is "STRING". This object belongs to String class. in the previous example we did not have return type.
+
+        Function<Integer, Double> b = new MyClass()::method;
+        BiFunction<MyClass, Integer, Double> b1 = MyClass::method;
 
     }
 }
