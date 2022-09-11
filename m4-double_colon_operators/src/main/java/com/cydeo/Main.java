@@ -36,7 +36,7 @@ public class Main {
         Consumer<Integer> display2 = System.out::println;
 
 
-        
+
 
     }
 }
