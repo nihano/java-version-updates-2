@@ -1,6 +1,7 @@
 package com.cydeo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class AppleTast {
         inventory.sort(sortApple);
         System.out.println(inventory);
 
+
         //Comparator<Apple> sortApple2 = comparing(Apple::getWeight);//imported static method instead of Comparator.comparing --> comparing
         inventory.sort(comparing(Apple::getWeight));
         System.out.println(inventory);
@@ -29,7 +31,7 @@ public class AppleTast {
         //Chaining
         inventory
                 .sort(comparing(Apple::getWeight)
-                .reversed().thenComparing(Apple::getColor);
+                .reversed().thenComparing(Apple::getColor));
 
 
 

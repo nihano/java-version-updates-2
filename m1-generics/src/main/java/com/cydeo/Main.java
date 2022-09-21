@@ -13,6 +13,7 @@ public class Main {
         items.add(3);
         //items.add("Apple");
 
+
         printDoubled(items);
 
         System.out.println("*********************************");
@@ -38,6 +39,8 @@ public class Main {
             System.out.println(i*2);
         }
     }
+
+
 
 
 }
