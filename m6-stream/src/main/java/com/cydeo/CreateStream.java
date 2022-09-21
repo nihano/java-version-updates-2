@@ -1,19 +1,17 @@
 package com.cydeo;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class Main {
+public class CreateStream {
 
     public static void main(String[] args) {
 
 
         //Creating Stream from Array
         String[] courses = {"Java", "Spring", "Agile"};
-        Stream<String> courseStream = Arrays.stream(courses);
+        Stream<String> courseStream = Arrays.stream(courses); // converted to stream
 
         //Creating Stream from Collection
         List<String> courseList = Arrays.asList("Java", "Spring", "Agile");
@@ -26,6 +24,9 @@ public class Main {
         );
 
         Stream<Course> myCourseStream =myCourses.stream();
+
+        //Creating stream values
+        Stream<Integer> stream = Stream.of(1,2,3,4); // another way creating stream is of() method
 
 
 
