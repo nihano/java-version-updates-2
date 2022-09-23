@@ -11,6 +11,7 @@ import java.util.stream.Stream;
 public class Reducing {
     public static void main(String[] args) {
 
+
         List<Integer> numbers = Arrays.asList(4, 5, 3, 9);
 
         int sum = 0;
@@ -58,6 +59,10 @@ public class Reducing {
                 .map(Dish::getCalories)
                 .reduce(Integer::sum);
         System.out.println("calTotal3 = " + calTotal3.get());
+
+        System.out.println("****Count****");
+        long dishCount = DishData.getAll().stream().count();
+        System.out.println(dishCount);
 
     }
 }
