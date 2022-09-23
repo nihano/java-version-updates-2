@@ -29,7 +29,7 @@ public class TakeWhileDropWhile {
 
     public static List<String> getStocksBelowFiveHundredFilter(List<Stock> stocks){
         return stocks.stream()
-                .peek(stock -> System.out.println("Filter proccessing : " + stock))
+                .peek(stock -> System.out.println("Filter proccessing : " + stock)) //peek() debugging purpose, shows which data we are working on. list must be sorted.
                 .filter(TakeWhileDropWhile::isStockLessThanFiveHundred)
                 .map(Stock::getName)
                 .collect(Collectors.toList());
@@ -38,7 +38,7 @@ public class TakeWhileDropWhile {
     public static List<String> getStocksBelowFiveHundred(List<Stock> stocks){
         return stocks.stream()
                 .peek(stock -> System.out.println("takeWhile proccessing : " + stock))
-                .takeWhile(TakeWhileDropWhile::isStockLessThanFiveHundred)
+                .takeWhile(TakeWhileDropWhile::isStockLessThanFiveHundred) //difference between takeWhile() and filter() takeWhile() stops when it finds unmatched one
                 .map(Stock::getName)
                 .collect(Collectors.toList());
     }
