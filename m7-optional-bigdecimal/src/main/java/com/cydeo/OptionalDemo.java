@@ -1,5 +1,9 @@
 package com.cydeo;
 
+
+import com.cydeo.java9.FactoryMethodDemo;
+
+import java.nio.channels.OverlappingFileLockException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -31,6 +35,9 @@ public class OptionalDemo {
 
         //orElse()
         System.out.println(bigNumber.orElse(5));
+
+        FactoryMethodDemo f1 = new FactoryMethodDemo(); //modularity example - new version updates
+       // Apple a1 = new Apple(); we did not add it in module-info.java in m8 module. this comes from java10 we did not export it.
 
 
 
