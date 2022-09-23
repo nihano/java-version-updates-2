@@ -21,6 +21,7 @@ public class OrElseThrowDemo {
          */
 
         System.out.println(str.orElseThrow());
+        System.out.println(str.orElseThrow(()-> new RuntimeException())); //this throws exception as well??
 
 
 
