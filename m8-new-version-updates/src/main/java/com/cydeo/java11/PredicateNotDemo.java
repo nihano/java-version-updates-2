@@ -15,7 +15,8 @@ public class PredicateNotDemo {
        // Predicate<Integer> odd = i->i%2!=0;
 
         List<Integer> evenNumbers = list.stream()
-                .filter(odd)
+               // .filter(odd)
+                .filter(Predicate.not(even))
                 .collect(Collectors.toList());
 
         System.out.println(evenNumbers);
