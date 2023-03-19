@@ -31,6 +31,8 @@ public class Main {
 
         Function<Integer, Double> b = new MyClass()::method;
         BiFunction<MyClass, Integer, Double> b1 = MyClass::method;
+        BiFunction<MyClass, Integer, Double> b5 = (x,y) -> x.method(y);
+        System.out.println("example" + b5.apply(new MyClass(), 5));
 
         Consumer<Integer> display = i -> System.out.println(i);
         Consumer<Integer> display2 = System.out::println;
